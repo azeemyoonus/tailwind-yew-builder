@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:14
+FROM node:22.5.1-slim
 
 # Set the working directory in the container
 WORKDIR /work
@@ -8,7 +8,7 @@ WORKDIR /work
 
 
 # Install tailwindcss and other npm packages globally
-RUN npm install --global tailwindcss@1.9.6 tailwindcss-cli@latest postcss@8.4.14 autoprefixer@9.8.8 clean-css-cli@5.5.0 npm-run@latest pg-promise@4.8.1 pdfkit@0.11.0 sanitize-html@1.4.2 socket.io@3.1.2
+RUN npm install --global tailwindcss@1.9.6 tailwindcss-cli@latest postcss@8.4.14 autoprefixer@10.4.19 clean-css-cli@5.5.0 npm-run@latest pg-promise@11.4.3 pdfkit@0.11.0 sanitize-html@2.12.1 socket.io@4.6.2
 
 # Copy necessary files into the container
 COPY package.json .
